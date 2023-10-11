@@ -1,0 +1,21 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  datasource:
+    url: 'jdbc:mysql://localhost:3306/classic_workout'
+    username: root
+    password: root
+    driver-class-name: 'com.mysql.jdbc.Driver'
+
+logging:
+  level:
+    root: WARN
+    web: INFO
+    fr.babaprog.security: DEBUG
+
+token:
+  expiration: 3600000 # 1 hour in millisecond
+  secret:
+    key: d5a67978dd5fba160d6bfb0a83939659db76bddf86fb43e3e997d2a6e2927225 # node -e "console.log(require('crypto').randomBytes(32).toString('hex'))
