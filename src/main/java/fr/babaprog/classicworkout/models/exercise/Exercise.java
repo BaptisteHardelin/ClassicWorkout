@@ -10,6 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Builder
@@ -21,9 +22,9 @@ public class Exercise {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String french_name;
-    private String english_name;
-    private String muscular_group;
+    private String frenchName;
+    private String englishName;
+    private List<String> muscularGroup;
     private int weight;
-    private LocalDateTime last_time_done;
+    private LocalDateTime lastTimeDone;
 }

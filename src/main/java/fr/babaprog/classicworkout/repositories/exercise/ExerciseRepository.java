@@ -11,7 +11,7 @@ import java.util.Optional;
 @Repository
 public interface ExerciseRepository extends JpaRepository<Exercise, Long> {
 
-    @Query(value = "SELECT * FROM Exercise e WHERE e.french_name = :exerciseName or e.english_name = :exerciseName", nativeQuery = true)
+    @Query(value = "SELECT * FROM Exercise e WHERE e.frenchName = :exerciseName or e.englishName = :exerciseName", nativeQuery = true)
     Optional<Exercise> findByFrenchNameOrEnglishName(String exerciseName);
 
 }

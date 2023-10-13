@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Builder
@@ -13,9 +14,9 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class ExerciseRequest {
 
-    private String french_name;
-    private String english_name;
-    private String muscular_group;
+    private String frenchName;
+    private String englishName;
+    private List<String> muscularGroup;
     private int weight;
-    private LocalDateTime last_time_done;
+    private LocalDateTime lastTimeDone;
 }

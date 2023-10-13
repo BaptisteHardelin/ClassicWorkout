@@ -16,11 +16,11 @@ public class ExerciseService {
     public Exercise savedExercise(ExerciseRequest exerciseRequest) {
         var newExercise = Exercise
                 .builder()
-                .french_name(exerciseRequest.getFrench_name())
-                .english_name(exerciseRequest.getEnglish_name())
-                .muscular_group(exerciseRequest.getMuscular_group())
+                .frenchName(exerciseRequest.getFrenchName())
+                .englishName(exerciseRequest.getEnglishName())
+                .muscularGroup(exerciseRequest.getMuscularGroup())
                 .weight(exerciseRequest.getWeight())
-                .last_time_done(exerciseRequest.getLast_time_done())
+                .lastTimeDone(exerciseRequest.getLastTimeDone())
                 .build();
 
         newExercise = exerciseRepository.save(newExercise);
