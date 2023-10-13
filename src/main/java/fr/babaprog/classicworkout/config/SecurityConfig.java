@@ -56,6 +56,8 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/api/v1/exercise/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/v1/exercise/name/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/v1/exercise/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/v1/workout/**").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/v1/workout/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .authenticationProvider(authenticationProvider()).addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);

@@ -30,7 +30,7 @@ public class ExerciseController {
     @GetMapping("/name")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Exercise> getExerciseByName(@RequestParam String name) {
-        var exercise = exerciseRepository.findByFrenchNameOrEnglishName(name.toLowerCase(Locale.ROOT).trim());
+        var exercise = exerciseRepository.findByFrenchNameOrEnglishName(name.toLowerCase().trim());
         return exercise.map(ResponseEntity::ok)
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
